@@ -1,0 +1,12 @@
+.white_place {
+    padding: auto;
+    margin-top: 536px;
+    margin-left: 45px;
+    margin-right: 45px;
+    width: 100%;
+    height: 100%;
+    border:1px solid #000;
+    border-radius: 61px;
+    background-color: blanchedalmond;
+
+}
