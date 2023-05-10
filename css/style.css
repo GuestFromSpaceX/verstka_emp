@@ -7,7 +7,7 @@ body {
     background-color: #E6F1EB;
 
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 
     position: relative;
 
@@ -246,12 +246,15 @@ body {
     
     flex: 1 1 1350px;
     max-width: 1350px;
+    min-width: 320px;
 
     padding: 90px;
     margin-left: 45px;
     margin-right: 45px;
     background: #F6F6F6;
     border-radius: 61px 61px 0px 0px;
+
+    z-index: 1;
 }
 
 .bottom__left {
@@ -276,7 +279,7 @@ body {
     color: #555555;
 }
 
-.graf__radio__buttons {
+.bottom__left__buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -287,15 +290,76 @@ body {
     max-height: 33px;
 }
 
-.graf__input__title {
+.bottom__left__radio__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom__left__radio__button input[type=radio] {
+	display: none;
+}
+.bottom__left__radio__button label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 8px;
+	line-height: 34px;
+	border-radius: 6px;
+	user-select: none;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
 
     color: #767676;
 }
+/* Checked */
+.bottom__left__radio__button input[type=radio]:checked + label {
+	background: #498553;
+    border-radius: 11px;
+    padding: 8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FCFDFC;
+}
+/* Hover */
+.bottom__left__radio__button label:hover {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #767676;
+}
+/* Disabled */
+.bottom__left__radio__button input[type=radio]:disabled + label {
+	background: #efefef;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #767676;
+}
+
 
 .graf {
     background-color: #858149;
@@ -328,7 +392,7 @@ body {
     color: #555555;
 }
 
-.themes__radio__buttons {
+.bottom__right__radio__buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -339,15 +403,77 @@ body {
     max-height: 33px;
 }
 
-.themes__input__title {
+.bottom__right__radio__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom__right__radio__button input[type=radio] {
+	display: none;
+}
+.bottom__right__radio__button label {
+	display: inline-block;
+	cursor: pointer;
+	padding: 8px;
+	line-height: 34px;
+	border-radius: 6px;
+	user-select: none;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    /* identical to box height */
 
-    color: #767676;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #767676;
 }
+/* Checked */
+.bottom__right__radio__button input[type=radio]:checked + label {
+	background: #498553;
+    border-radius: 11px;
+    padding: 8px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FCFDFC;
+}
+/* Hover */
+.bottom__right__radio__button label:hover {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #767676;
+}
+/* Disabled */
+.bottom__right__radio__button input[type=radio]:disabled + label {
+	background: #efefef;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #767676;
+}
+
+
 
 .themes__line__input__block {
     display: flex;
