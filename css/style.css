@@ -13,7 +13,7 @@ body {
 
     flex: 1 1 1440px;
     max-width: 1440px;
-    max-height: 2000px;
+    max-height: 1150px;
     margin: 0px;
     margin-top: 40px;
 }
@@ -38,9 +38,8 @@ body {
     position: relative;
 
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     /*flex: 1 1 1121px;
     max-width: 1121px;
@@ -52,7 +51,7 @@ body {
 
 .top__left {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: space-around;
 
     flex: 1 1 576px;
@@ -63,7 +62,6 @@ body {
 
 .under_header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     
     flex: 1 1 468px;
@@ -73,7 +71,7 @@ body {
 
 .under_header_title_1 {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: space-between;
 }
 
@@ -99,7 +97,7 @@ body {
 
 .norms {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: space-between;
     
     flex: 1 1 576px;
@@ -126,7 +124,6 @@ body {
 
 .norms_panel {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     
     flex: 1 1 576px;
@@ -239,8 +236,7 @@ body {
     position: relative;
 
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-content: flex-start;
     
@@ -279,7 +275,6 @@ body {
 
 .bottom__left__buttons {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
@@ -582,4 +577,42 @@ body {
     justify-content: center;
 
     color: #FFFFFF;
+}
+
+@media (width <= 1070px) {
+    .bottom {
+        position: relative;
+    
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: flex-start;
+        
+        flex: 1 1 1350px;
+        max-width: 1350px;
+        min-width: 320px;
+    
+        padding: 90px;
+        margin-left: 45px;
+        margin-right: 45px;
+        background: #F6F6F6;
+        border-radius: 61px 61px 0px 0px;
+    
+        z-index: 1;
+    }
+
+    .top {
+        position: relative;
+    
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    
+        /*flex: 1 1 1121px;
+        max-width: 1121px;
+        max-height: 500px;
+        min-height: 440px;*/
+        margin-left: 145px;
+        margin-right: 145px;
+    }
 }
