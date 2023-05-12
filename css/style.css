@@ -619,3 +619,17 @@ body {
         margin-top: 20px;
     }
 }
+
+.rect_small .rect_regular .rect_big {
+    position: absolute;
+
+    z-index: -1;
+}
+
+.rect_big {
+    position: absolute;
+    left: 70%;
+    right: -17.5%;
+    top: 53.22%;
+    bottom: 25%;
+}
