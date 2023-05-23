@@ -15,8 +15,10 @@ body {
     max-width: 1440px;
     max-height: 1150px;
     margin: 0px;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
 }
+
+
 
 .header {
     display: flex;
@@ -25,6 +27,7 @@ body {
 
     margin-left: 145px;
     margin-right: 145px;
+    margin-top: 40px;
 }
 
 .name {
@@ -354,7 +357,6 @@ body {
     color: #767676;
 }
 .graf {
-    background-color: #858149;
     display: flex;
 
     flex: 1 1 540px;
@@ -363,6 +365,11 @@ body {
 
     margin-top: 27px;
 }
+
+.graf_img {
+    width: 540px;
+}
+
 .bottom__right {
     display: flex;
     flex-direction: column;
@@ -595,41 +602,64 @@ body {
     .bottom__right {
         margin-top: 20px;
     }
-}
 
-@media (width <= 960px) {
-  
-    body {
-        background-color: #FF9F9F;
+    #rect_big {
+        display: none;
     }
 
-    .bottom {
-        flex-flow: row wrap;
-        justify-content: center;
-       
-    }
-
-    .top {
-        flex-flow: row wrap;
-        justify-content: center;
-    }
+    @media (width <= 750px) {
+      
     
-
-    .bottom__right {
-        margin-top: 20px;
     }
 }
 
-.rect_small .rect_regular .rect_big {
+#media {
     position: absolute;
+    display: flex;
 
-    z-index: -1;
+    height: 647px;
+    width: 100%;
+
+    margin-right: 45px;
+    margin-left: 45px;
+
+    z-index: -2;
 }
 
-.rect_big {
+#rect_small {
     position: absolute;
-    left: 70%;
-    right: -17.5%;
-    top: 53.22%;
-    bottom: 25%;
+
+    width: 97px;
+    height: 97px;
+    left: 5.62%;
+    right: 87.64%;
+    top: 50.05%;
+    bottom: 59.47%;
+
+    z-index: -2;
+}
+
+#rect_regular {
+    position: absolute;
+
+    width: 291px;
+    height: 177px;
+    left: 35%;
+    top: -5%;
+    bottom: 82.71%;
+
+    z-index: -2;
+}
+
+#rect_big {
+    position: absolute;
+
+    width: 367px;
+    height: 223px;
+    left: 55%;
+    right: 17.5%;
+    top: 70%;
+    bottom: 0%;
+
+    z-index: -2;
 }
